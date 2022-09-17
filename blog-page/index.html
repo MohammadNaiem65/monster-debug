@@ -56,7 +56,88 @@
             "Event Loop's" comes in. queue.waitForMessage() waits synchronously for a message to arrive (if one is not
             already available and waiting to be handled).</p>
     </div>
+    <div class="mt-14 py-5 bg-gray-200">
+        <div class="w-4/5 mx-auto">
+            <h1 class="text-4xl">4. How do we get <strong>Undefined</strong> in our code.</strong>
+            </h1>
+            <p class="mt-3"><strong>undefined</strong> is a property of the global object. That is, it is
+                a variable in global scope. The initial value of undefined is the primitive value undefined. Usually, we
+                get undefined in 6 cases.</p>
+        </div>
+        <div class="w-4/5 mx-auto mt-3">
+            <p class="mt-3">1. If we initialize a variable but don't define it's value, it will give
+                <strong>undefined.</strong>
+            </p>
+            <p class="mt-3"><b>For example:</b> <br>
+                let i; <br>
+                console.log(i);
+            </p>
+        </div>
+        <div class="w-4/5 mx-auto mt-6">
+            <p>2. Function that returns nothing will give undefined to a variable, the value
+                of that variable will be <strong>undefined.</strong>
+            </p>
+            <p class="mt-3"><b>For example:</b> <br>
+                const multiply = (a, b) => {<br>
+                const result = a * b;<br>
+                return;<br>
+                } <br>
+                console.log(add(2, 4));
 
+            </p>
+        </div>
+        <div class="w-4/5 mx-auto mt-6">
+            <p>3. Function that does not contain return statement, the value
+                of that will be <strong>undefined.</strong>
+            </p>
+            <p class="mt-3"><b>For example:</b> <br>
+                const add = (a, b) => {<br>
+                const result = a + b;<br>
+                } <br>
+                console.log(add(2, 4));
+
+            </p>
+        </div>
+        <div class="w-4/5 mx-auto mt-6">
+            <p>4. If enough arguments will not pass to a function, it will give <strong>undefined.</strong>
+            </p>
+            <p class="mt-3"><b>For example:</b> <br>
+                const add = (a, b) => {<br>
+                const result = a + b;<br>
+                } <br>
+                console.log(add(2));
+
+            </p>
+        </div>
+        <div class="w-4/5 mx-auto mt-6">
+            <p>5. If we console.log a property that does not exist in an object, it will give
+                <strong>undefined.</strong>
+            </p>
+            <p class="mt-3"><b>For example:</b> <br>
+                const myself = { name: "Naiem", age: 18, jod: "learning" };<br>
+                console.log(myself.salary)
+
+            </p>
+        </div>
+        <div class="w-4/5 mx-auto mt-6">
+            <p>6. If we console.log a value from an array with index of which index value does not exist, it will give
+                <strong>undefined.</strong>
+            </p>
+            <p class="mt-3"><b>For example:</b> <br>
+                const marks = [24, 54, 12, 53, 23];<br>
+                console.log(marks[10])
+            </p>
+        </div>
+        <div class="w-4/5 mx-auto mt-8">
+            <p>Besides this there are many others cases for which we can get undefined. For instance, if we delete a
+                value from an array an try to console.log it, it will give undefined.</p>
+            <p class="mt-3"><b>For example:</b> <br>
+                const marks = [24, 54, 12, 53, 23];<br>
+                marks.pop() <br>
+                console.log(marks[4])
+            </p>
+        </div>
+    </div>
 </main>
 
 <body>
